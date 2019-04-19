@@ -8,9 +8,15 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+    const order = {
+        product_id: req.body.product_id,
+        order_quantity: req.body.order_quantity
+    };
+
     res.status(201).json({
-        message: "Handling POST request to /orders"
-    })
+        message: "Orders created",
+        createdOrder: order
+    });
 });
 
 router.get('/:order_id', (req, res, next) => {
