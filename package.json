@@ -1,0 +1,14 @@
+{
+  "name": "shoppee_clone_api",
+  "version": "1.0.0",
+  "description": "shoppee clone rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmad Irfan Mohammad Shukri",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
