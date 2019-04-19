@@ -1,12 +1,15 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 
 // import products query from products.js
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+
+mongoose.connect('mongodb+srv://shoppee_admin:' + process.env.MONGO_ATLAS_PW + '@cluster0-2loih.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
 
 app.use(morgan('dev'));
 
